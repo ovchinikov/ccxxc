@@ -4,10 +4,10 @@ app.use(express.json())
 const cors = require('cors')
 app.use(cors())
 
-const morgan = require(`morgan`)
-app.use(morgan(`tiny`))
+const morgan = require('morgan')
+app.use(morgan('tiny'))
 
-morgan.token(`body`, (req) => {
+morgan.token('body', (req) => {
   JSON.stringify(req.body)
 })
 
